@@ -280,10 +280,9 @@ options:
             `TRUE` or `FALSE` (default), provide a Q-Q plot of residuals
 
     - name: contrasts
-      hidden: true
       title: Contrasts
       type: Array
-      items: (bs)
+      items: (rm)
       default:
       template:
           type: Group
@@ -309,7 +308,12 @@ options:
                   - name: polynomial
                     title: Polynomial
       description:
-          R: in development
+          ui: >
+            the contrasts to use.
+          R: >
+            a list of lists specifying the factor and type of contrast to use, one
+            of `'deviation'`, `'simple'`, `'difference'`, `'helmert'`, `'repeated'`
+            or `'polynomial'`
 
     - name: postHoc
       title: Post Hoc Tests
